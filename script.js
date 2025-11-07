@@ -39,3 +39,16 @@ function playRound(humanChoice, computerChoice) {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
   }
 }
+
+function playGame() {
+  
+  for (let i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+  }
+  
+  console.log(`Final Score - You: ${humanScore}, Computer: ${computerScore}`);
+}
+
+playGame();
